@@ -1,10 +1,11 @@
 def checkPalindrome(word):
+    print('here')
     word = word.lower()
+    print(word)
     word = word.replace(' ', '')
     lenOfOriginalWord = len(word)
     if lenOfOriginalWord == 0:
-        return "Not Palindrome"
-
+        print('Not Palindrome')
     remainder = 1
     if lenOfOriginalWord % 2 == 0:
         remainder = 0
@@ -12,12 +13,9 @@ def checkPalindrome(word):
         firstCharacter = word[0]
         lastCharacter = word[len(word) - 1]
         if firstCharacter != lastCharacter:
-            return "Not Palindrome"
+            print("Not Palindrome")
         word = word[1 : len(word) - 1]
-    return "Palindrome"
+    print("Palindrome")
 
-print(checkPalindrome("Anna"))
-print(checkPalindrome("bob"))
-print(checkPalindrome("boxb"))
-print(checkPalindrome(""))
-print(checkPalindrome("abcdefgedcba"))
+word1 = input('Enter the word to check: ')
+checkPalindrome(word1)
